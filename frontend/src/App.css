@@ -1,0 +1,697 @@
+/* ============================================================
+   GLOBAL
+============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #595a5b;
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.header {
+  background: #111827;
+  color: white;
+
+  padding: 22px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px 15px;
+
+  border-radius: 20px;
+
+  background: #1f2937;
+
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  display: inline-block;
+}
+
+.status-dot.online {
+  background: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+.status-dot.offline {
+  background: #ef4444;
+}
+
+
+/* ============================================================
+   MAIN
+============================================================ */
+
+main {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 30px 25px 50px;
+}
+
+
+/* ============================================================
+   WELCOME
+============================================================ */
+
+.welcome {
+  margin-bottom: 25px;
+}
+
+.welcome h2 {
+  margin: 0 0 8px;
+
+  font-size: 25px;
+}
+
+.welcome p {
+  margin: 0;
+
+  color: #52076b;
+
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   SENSOR GRID
+============================================================ */
+
+.sensor-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(210px, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 35px;
+}
+
+.sensor-card {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sensor-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.10);
+}
+
+.sensor-icon {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 13px;
+
+  background: #f1f5f9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+}
+
+.sensor-card h3 {
+  margin: 0 0 7px;
+
+  font-size: 14px;
+
+  color: #64748b;
+}
+
+.sensor-card strong {
+  font-size: 22px;
+
+  color: #111827;
+}
+
+
+/* ============================================================
+   SECTION
+============================================================ */
+
+.system-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.system-section h2 {
+  margin-bottom: 18px;
+
+  font-size: 21px;
+}
+
+
+/* ============================================================
+   AI INTELLIGENCE GRID
+============================================================ */
+
+.intelligence-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 18px;
+}
+
+.info-card {
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  padding: 22px;
+
+  min-height: 175px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.10);
+}
+
+.info-card > span {
+  font-size: 28px;
+
+  display: block;
+
+  margin-bottom: 12px;
+}
+
+.info-card h3 {
+  margin: 0 0 10px;
+
+  font-size: 16px;
+}
+
+.info-card strong {
+  display: block;
+
+  font-size: 22px;
+
+  margin-bottom: 10px;
+
+  color: #111827;
+}
+
+.info-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   SMART DEVICE GRID
+============================================================ */
+
+.device-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 18px;
+}
+
+.device-card {
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.device-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.10);
+}
+
+.device-icon {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 14px;
+
+  background: #f1f5f9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  flex-shrink: 0;
+}
+
+.device-info {
+  min-width: 0;
+}
+
+.device-info h3 {
+  margin: 0 0 8px;
+
+  font-size: 15px;
+
+  color: #334155;
+}
+
+.device-on,
+.device-off {
+  display: inline-block;
+
+  padding: 5px 11px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+.device-on {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.device-off {
+  background: #f1f5f9;
+
+  color: #64748b;
+}
+
+
+/* ============================================================
+   AUTOMATION ACTIONS
+============================================================ */
+
+.actions-card {
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.05);
+}
+
+.action-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.action-item:last-child {
+  border-bottom: none;
+}
+
+.action-item > span {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: #dcfce7;
+
+  color: #15803d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  flex-shrink: 0;
+}
+
+.action-item p {
+  margin: 2px 0 0;
+
+  color: #475569;
+
+  line-height: 1.5;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   AI STATUS
+============================================================ */
+
+.ai-status {
+  margin-top: 35px;
+
+  background: #111827;
+
+  color: white;
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.ai-status h2 {
+  margin: 0 0 8px;
+
+  font-size: 20px;
+}
+
+.ai-status p {
+  margin: 0;
+
+  color: #cbd5e1;
+
+  line-height: 1.5;
+
+  font-size: 14px;
+}
+
+.ai-badge {
+  background: #14532d;
+
+  color: #86efac;
+
+  border: 1px solid #166534;
+
+  border-radius: 20px;
+
+  padding: 8px 15px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+  text-align: center;
+
+  margin-top: 30px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+footer strong {
+  color: #334155;
+}
+
+
+/* ============================================================
+   RESPONSIVE DESIGN
+============================================================ */
+
+@media (max-width: 700px) {
+
+  .header {
+    padding: 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  main {
+    padding: 25px 16px 40px;
+  }
+
+  .sensor-grid,
+  .intelligence-grid,
+  .device-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-status {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+/* ============================================================
+   MANUAL DEVICE CONTROLS
+============================================================ */
+
+.device-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.control-button {
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #475569;
+
+  padding: 6px 12px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.control-button:hover {
+  transform: translateY(-1px);
+  background: #e2e8f0;
+}
+
+.control-button.active {
+  background: #dcfce7;
+  color: #15803d;
+  border-color: #86efac;
+}
+
+.control-button.active-off {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-color: #fca5a5;
+}
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-message {
+  margin-bottom: 18px;
+
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+
+  color: #047857;
+
+  font-size: 14px;
+}
+.mode-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mode-switch h3 {
+  margin-bottom: 8px;
+}
+
+.mode-switch p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.mode-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* VOICE CONTROL */
+.voice-control-card {
+  display: block;
+  width: 100%;
+}
+
+.voice-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.voice-start-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 20px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+}
+
+.voice-start-button:hover {
+  background: #1d4ed8;
+}
+
+.voice-start-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.voice-message,
+.voice-last-command,
+.voice-description {
+  margin: 12px 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.voice-examples {
+  margin-top: 16px;
+}
+
+.voice-examples ul {
+  padding-left: 22px;
+  line-height: 1.8;
+}
